@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="dist/styles/main.css">
+  <title>Document</title>
+</head>
+<body>
+  <div class="container">
+    <div class="timer-body">
+      <label class="timer-body__form__box--label none aviso" for=""></label>
+      <form action="" class="timer-body__form">
+        <div class="timer-body__form__box">
+          <label class="timer-body__form__box--label" for="">DAY</label>
+          <input class="timer-body__form__box--input" type="number" max="31" id="days" placeholder="DD">
+          <label class="timer-body__form__box--label none aviso" for=""></label>
+        </div>
+        <div class="timer-body__form__box">
+          <label class="timer-body__form__box--label" for="">MONTH</label>
+          <input class="timer-body__form__box--input" type="number" max="12" placeholder="MM" id="months">
+          <label class="timer-body__form__box--label none aviso" for=""></label>
+        </div>
+        <div class="timer-body__form__box">
+          <label class="timer-body__form__box--label" for="">YEAR</label>
+          <input class="timer-body__form__box--input" type="number" max="2023" placeholder="YYYY" id="years">
+          <label class="timer-body__form__box--label none aviso" for=""></label>
+        </div>
+      </form>
+      <div class="timer-body__tempo">
+        <h4><span id="years-b">--</span>Years</h4>
+      </div>
+      <div class="timer-body__tempo">
+        <h4><span id="months-b">--</span>months</h4>
+      </div>
+      <div class="timer-body__tempo">
+        <h4><span id="days-b">--</span>days</h4>
+      </div>
+      <button id="botao" class="timer-body--button"><img class="timer-body--button-img" src="assets/images/icon-arrow.svg" alt=""></button>
+    </div>
+  </div>
+
+  <script src="dist/scripts/total.js"></script>
+</body>
+</html>

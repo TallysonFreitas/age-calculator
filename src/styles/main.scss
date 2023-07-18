@@ -1,0 +1,124 @@
+@use 'variaveis';
+
+@font-face {
+    font-family: 'font';
+    src: url(../../assets/fonts/Poppins-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'font-italic';
+    src: url(../../assets/fonts/Poppins-ExtraBoldItalic.ttf);
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'font';
+}
+
+body{
+    background-color: variaveis.$Lightgrey;
+}
+
+.container{
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+    height: 98vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.timer-body{
+    background-color: variaveis.$White;
+    height: 600px;
+    width: 100%;
+    border-radius: 16px 32px 240px;
+    padding: 40px;
+    position: relative;
+
+    &__form{
+        display: flex;
+        justify-content: flex-start;
+        gap: 4%;
+        margin-top: 20px;
+        padding-bottom: 40px;
+        border-bottom: 2px solid variaveis.$Lightgrey;
+
+        &__box{
+            max-width: 22%;
+            width: 100%;
+
+            &--label{
+                display: block;
+                font-size: 14px;
+                margin-bottom: 4px;
+                font-weight:600;
+
+            }
+
+            &--input{
+                padding: 16px;
+                width: 100%;
+                border-radius: 8px;
+                border: 1px solid variaveis.$Lightgrey;
+                outline: 1px transparent;
+                font-size: 28px;
+                font-weight: bold;
+
+                &:focus{
+                    outline: 1px solid variaveis.$Purple;
+                }
+            }
+        }
+    }
+
+    &__tempo{
+        height: 10vh;
+        margin-top: 16px;
+        margin-left: 32px;
+
+        h4{
+            font-size: 88px;
+            font-family: 'font-italic';
+            font-weight: bold;
+        }
+        span{
+            letter-spacing: 10px;
+            color: variaveis.$Purple;
+            font-weight: bold;
+        }
+    }
+
+    &--button{
+        position: absolute;
+        right: 4%;
+        top: 21%;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+
+        &-img{
+        padding: 28px;
+        border-radius: 50%;
+        background-color: variaveis.$Offblack;
+        transition: all ease 0.2s;
+
+            &:hover{
+                background-color: variaveis.$Smokeygrey;
+            }
+        }
+    }
+}
+
+.none{
+    display: none;
+}
+
+.error{
+    display: block;
+    color: #f44;
+    margin-bottom: 0;
+}

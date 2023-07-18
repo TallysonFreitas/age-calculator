@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded',function () {
     })
 
     function idade() {  
-        const nascimento = new Date(anos.value, meses.value, dias.value)
+        const nascimento = new Date(anos.value, meses.value - 1, dias.value)
         const idade = new Date()
         idade.setFullYear(hoje.getFullYear() - anos.value)
         idade.setMonth(hoje.getMonth() - meses.value + 1)
@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded',function () {
         }else if(nascimento.getTime() > hoje.getTime()){
                 avisos[0].classList.add('error')
                 avisos[0].innerHTML = 'A data de nascimento nao pode ser maior que a data atual'
-        }else if(dias.value > 31 || meses.value > 11 || anos.value > hoje.getFullYear()){
+        }else if(dias.value > 31 || meses.value > 12 || anos.value > hoje.getFullYear()){
             if(dias.value > 31){
                 avisos[1].classList.add('error')
                 avisos[1].innerHTML = 'Invalid'
@@ -62,7 +62,6 @@ document.addEventListener('DOMContentLoaded',function () {
             mesesb.innerHTML = idade.getMonth()
             diasb.innerHTML = idade.getDate()
         }
-        
     }
     
 })

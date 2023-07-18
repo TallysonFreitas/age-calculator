@@ -29,6 +29,9 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    @media (max-width:768px){
+        padding: 12px;
+    }
 }
 
 .timer-body{
@@ -38,6 +41,11 @@ body{
     border-radius: 16px 32px 240px;
     padding: 40px;
     position: relative;
+
+    @media (max-width:768px) {
+        padding:20px;
+        border-radius: 16px 32px 80px;
+    }
 
     &__form{
         display: flex;
@@ -50,6 +58,9 @@ body{
         &__box{
             max-width: 22%;
             width: 100%;
+            @media (max-width:768px) {
+                max-width: 26%;
+            }
 
             &--label{
                 display: block;
@@ -68,6 +79,10 @@ body{
                 font-size: 28px;
                 font-weight: bold;
 
+                @media (max-width:768px) {
+                    padding: 8px;
+                }
+
                 &:focus{
                     outline: 1px solid variaveis.$Purple;
                 }
@@ -79,11 +94,20 @@ body{
         height: 10vh;
         margin-top: 16px;
         margin-left: 32px;
+        @media (max-width:768px) {
+            margin: 0;
+            height: 8vh;
+        }
+    
 
         h4{
             font-size: 88px;
             font-family: 'font-italic';
             font-weight: bold;
+
+            @media (max-width:768px) {
+                font-size: 48px;
+            }
         }
         span{
             letter-spacing: 10px;
@@ -95,21 +119,37 @@ body{
     &--button{
         position: absolute;
         right: 4%;
-        top: 21%;
+        top: 28%;
         background-color: transparent;
         border: none;
         cursor: pointer;
 
+        @media (max-width:768px){
+            top: 25%;
+            right: 0;
+            left: 0;
+        }
+
         &-img{
         padding: 28px;
         border-radius: 50%;
-        background-color: variaveis.$Offblack;
+        background-color: variaveis.$Purple;
         transition: all ease 0.2s;
 
+        @media (max-width:768px){
+            padding: 20px;
+        }
+
             &:hover{
-                background-color: variaveis.$Smokeygrey;
+                background-color: variaveis.$Offblack;
             }
         }
+    }
+}
+
+.divisor{
+    @media (max-width:768px){
+        margin-top: 80px;
     }
 }
 

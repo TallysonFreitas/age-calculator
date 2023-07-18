@@ -19,3 +19,5 @@ exports.watch = function () {
     gulp.watch('./src/styles/*.scss',{ignoreInitial:false},gulp.series(compilaSass),)
     gulp.watch('./src/scripts/*.js',{ignoreInitial:false},gulp.series(encriptaJavascript),)
 }
+
+exports.build =  gulp.parallel(compilaSass,encriptaJavascript)
